@@ -4,7 +4,8 @@
   "description": "proxy for FEC",
   "main": "index.js",
   "scripts": {
-    "start": "node proxy-server/proxy-server.js"
+    "start": "nodemon proxy-server/proxy-server.js",
+    "stress": "k6 run spec/stressTest.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/Only-the-Best/Brian-Louie-Proxy#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "newrelic": "^4.11.0"
   }
 }
